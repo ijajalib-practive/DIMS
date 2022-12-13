@@ -3941,15 +3941,15 @@
 			</index>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
 		</table>
-		<table name="field_config" row_count="2217" spec="" >
+		<table name="field_config_1" prior="field_config" row_count="2217" spec="" >
 			<column name="field_config_id" type="INT" length="11" jt="4" mandatory="y" >
 				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
-			<column name="target_table_name" type="VARCHAR" length="30" jt="12" mandatory="y" />
-			<column name="target_column_name" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="target_table_name_1" prior="target_table_name" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="target_column_name_1" prior="target_column_name_2" type="VARCHAR" length="30" jt="12" mandatory="y" />
 			<column name="card_brand_code" type="VARCHAR" length="5" jt="12" mandatory="y" />
 			<column name="source_name" type="VARCHAR" length="30" jt="12" mandatory="y" />
-			<column name="source_column_name" type="VARCHAR" length="50" jt="12" mandatory="y" />
+			<column name="source_column_name_1" prior="source_column_name_3" type="VARCHAR" length="50" jt="12" mandatory="y" />
 			<column name="region_code" type="VARCHAR" length="10" jt="12" mandatory="y" />
 			<column name="acquirer_name" type="VARCHAR" length="3" jt="12" mandatory="y" />
 			<column name="last_modified_by" type="VARCHAR" length="20" jt="12" />
@@ -10135,8 +10135,8 @@
 		<entity schema="dims" name="fee_rule_type" color="3986C1" x="1040" y="1360" />
 		<entity schema="dims" name="fee_rule_type_detail" color="3986C1" x="704" y="1360" />
 		<entity schema="dims" name="fee_sott" color="3986C1" x="1376" y="1360" />
-		<entity schema="dims" name="field_config" color="3986C1" x="64" y="592" />
-		<entity schema="dims" name="file_directory_master" color="3986C1" x="384" y="656" />
+		<entity schema="dims" name="field_config_1" color="3986C1" x="64" y="592" />
+		<entity schema="dims" name="file_directory_master" color="3986C1" x="288" y="656" />
 		<entity schema="dims" name="file_sent_cover_page_mapping" color="3986C1" x="48" y="1392" />
 		<entity schema="dims" name="file_sent_detail" color="3986C1" x="64" y="960" />
 		<entity schema="dims" name="financial_ledger_config" color="3986C1" x="704" y="1648" />
@@ -10312,7 +10312,7 @@ for ( Schema schema: project.schemas ){
 		<entity schema="dims" name="fee_rule_type" color="C7F4BE" x="2640" y="1360" />
 		<entity schema="dims" name="fee_rule_type_detail" color="BED3F4" x="3552" y="1360" />
 		<entity schema="dims" name="fee_sott" color="C7F4BE" x="2928" y="1744" />
-		<entity schema="dims" name="field_config" color="BED3F4" x="7088" y="2736" />
+		<entity schema="dims" name="field_config_1" color="BED3F4" x="7088" y="2736" />
 		<entity schema="dims" name="file_directory_master" color="F4DDBE" x="4864" y="2480" />
 		<entity schema="dims" name="file_sent_cover_page_mapping" color="BEBEF4" x="3696" y="4144" />
 		<entity schema="dims" name="file_sent_detail" color="BEBEF4" x="3696" y="4416" />
@@ -10935,7 +10935,7 @@ for ( Schema schema: project.schemas ){
 			<entity schema="dims" name="region_master" />
 			<entity schema="dims" name="amex_acknowledgement_detail" />
 			<entity schema="dims" name="wex_data_detail" />
-			<entity schema="dims" name="field_config" />
+			<entity schema="dims" name="field_config_1" />
 			<entity schema="dims" name="table_config" />
 			<entity schema="dims" name="wex_header_detail" />
 			<entity schema="dims" name="default_queue_master" />
@@ -11120,7 +11120,7 @@ for ( Schema schema: project.schemas ){
 		<entity schema="dims" name="fee_rule_type" color="C7F4BE" x="3376" y="736" />
 		<entity schema="dims" name="fee_rule_type_detail" color="BED3F4" x="4464" y="1264" />
 		<entity schema="dims" name="fee_sott" color="C7F4BE" x="3728" y="1120" />
-		<entity schema="dims" name="field_config" color="BED3F4" x="8784" y="2448" />
+		<entity schema="dims" name="field_config_1" color="BED3F4" x="8784" y="2448" />
 		<entity schema="dims" name="file_directory_master" color="F4DDBE" x="6064" y="1856" />
 		<entity schema="dims" name="file_sent_cover_page_mapping" color="BEBEF4" x="4608" y="3520" />
 		<entity schema="dims" name="file_sent_detail" color="BEBEF4" x="4608" y="3792" />
