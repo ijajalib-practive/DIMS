@@ -3704,16 +3704,16 @@
 			</fk>
 			<options><![CDATA[ENGINE=InnoDB AUTO_INCREMENT=487 DEFAULT CHARSET=utf8]]></options>
 		</table>
-		<table name="fee_rule_logs_detail" row_count="2625" spec="" >
+		<table name="fee_rule_logs_detail_4" prior="fee_rule_logs_detail" row_count="2625" spec="" >
 			<column name="fee_rule_logs_detail_id" type="INT" length="11" jt="4" mandatory="y" >
 				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
 			<column name="fee_rule_logs_header_id" type="INT" length="11" jt="4" mandatory="y" />
 			<column name="fee_rule_daily_detail_id" type="INT" length="11" jt="4" />
-			<column name="fee_processing_id" type="INT" length="11" jt="4" />
+			<column name="fee_processing_id_4" prior="fee_processing_id" type="INT" length="11" jt="4" />
 			<column name="gl_out_detail_id" type="INT" length="11" jt="4" />
 			<column name="fee_rule_type_id" type="INT" length="11" jt="4" />
-			<column name="fee_rule_merchant_detail_id" type="INT" length="11" jt="4" />
+			<column name="fee_rule_merchant_detail_id_4" prior="fee_rule_merchant_detail_id" type="INT" length="11" jt="4" />
 			<column name="fee_rule_type_detail_id" type="INT" length="11" jt="4" />
 			<column name="merchant_number" type="VARCHAR" length="20" jt="12" mandatory="y" />
 			<column name="merchant_sequence_key" type="BIGINT" length="20" jt="-5" mandatory="y" />
@@ -3760,7 +3760,7 @@
 				<column name="fee_rule_daily_detail_id" />
 			</index>
 			<index name="fk_fee_rule_merch_detl_fee_rule_merch_dtl_id_01" unique="NORMAL" >
-				<column name="fee_rule_merchant_detail_id" />
+				<column name="fee_rule_merchant_detail_id_4" />
 			</index>
 			<index name="fk_gl_out_dtl_id_gl_out_detail_99" unique="NORMAL" >
 				<column name="gl_out_detail_id" />
@@ -3775,7 +3775,7 @@
 				<fk_column name="fee_rule_daily_detail_id" pk="fee_rule_daily_detail_id" />
 			</fk>
 			<fk name="fk_fee_rule_merch_detl_fee_rule_merch_dtl_id_01" to_schema="dims" to_table="fee_rule_merchant_detail" options="" >
-				<fk_column name="fee_rule_merchant_detail_id" pk="fee_rule_merchant_detail_id" />
+				<fk_column name="fee_rule_merchant_detail_id_4" pk="fee_rule_merchant_detail_id" />
 			</fk>
 			<fk name="fk_fee_rule_type_fee_rule_type_id_05" to_schema="dims" to_table="fee_rule_type" options="" >
 				<fk_column name="fee_rule_type_id" pk="fee_rule_type_id" />
@@ -10129,7 +10129,7 @@
 	<connector name="MySql_Dev3" database="MySql" driver_class="com.mysql.jdbc.Driver" driver_jar="mysql-connector-java-8.0.30.jar" url="jdbc:mysql://127.0.0.1:3999/dims" host="localhost" port="3306" user="dba_ncde_cloudsql_user" passwd="RjB4dHJkOFRfTXk4dFk=" useSystemProxy="false" />
 	<layout name="Letter Management" id="Layout-2a3" confirmed="y" show_relation="cascade" >
 		<entity schema="dims" name="fee_rule_daily_detail" color="3986C1" x="1040" y="656" />
-		<entity schema="dims" name="fee_rule_logs_detail" color="3986C1" x="704" y="656" />
+		<entity schema="dims" name="fee_rule_logs_detail_4" color="3986C1" x="704" y="656" />
 		<entity schema="dims" name="fee_rule_logs_header" color="3986C1" x="384" y="288" />
 		<entity schema="dims" name="fee_rule_merchant_detail" color="3986C1" x="1040" y="1024" />
 		<entity schema="dims" name="fee_rule_type" color="3986C1" x="1040" y="1360" />
@@ -10306,7 +10306,7 @@ for ( Schema schema: project.schemas ){
 		<entity schema="dims" name="fee_rule_controlling_org" color="BED3F4" x="3264" y="1664" />
 		<entity schema="dims" name="fee_rule_daily" color="C7F4BE" x="2912" y="2032" />
 		<entity schema="dims" name="fee_rule_daily_detail" color="C7F4BE" x="2640" y="2032" />
-		<entity schema="dims" name="fee_rule_logs_detail" color="C7F4BE" x="2352" y="1360" />
+		<entity schema="dims" name="fee_rule_logs_detail_4" color="C7F4BE" x="2352" y="1360" />
 		<entity schema="dims" name="fee_rule_logs_header" color="C7F4BE" x="2352" y="2032" />
 		<entity schema="dims" name="fee_rule_merchant_detail" color="BED3F4" x="3264" y="1360" />
 		<entity schema="dims" name="fee_rule_type" color="C7F4BE" x="2640" y="1360" />
@@ -10798,7 +10798,7 @@ for ( Schema schema: project.schemas ){
 			<entity schema="dims" name="etl_batch_fee_response" />
 		</group>
 		<group name="fee_rule_logs_detail" color="EEF7EC" >
-			<entity schema="dims" name="fee_rule_logs_detail" />
+			<entity schema="dims" name="fee_rule_logs_detail_4" />
 			<entity schema="dims" name="fee_rule_type" />
 			<entity schema="dims" name="fee_rule_daily_detail" />
 			<entity schema="dims" name="fee_processing" />
@@ -11114,7 +11114,7 @@ for ( Schema schema: project.schemas ){
 		<entity schema="dims" name="fee_rule_controlling_org" color="BED3F4" x="4464" y="1568" />
 		<entity schema="dims" name="fee_rule_daily" color="C7F4BE" x="3728" y="1408" />
 		<entity schema="dims" name="fee_rule_daily_detail" color="C7F4BE" x="3376" y="1408" />
-		<entity schema="dims" name="fee_rule_logs_detail" color="C7F4BE" x="3024" y="736" />
+		<entity schema="dims" name="fee_rule_logs_detail_4" color="C7F4BE" x="3024" y="736" />
 		<entity schema="dims" name="fee_rule_logs_header" color="C7F4BE" x="3024" y="1408" />
 		<entity schema="dims" name="fee_rule_merchant_detail" color="BED3F4" x="4112" y="1264" />
 		<entity schema="dims" name="fee_rule_type" color="C7F4BE" x="3376" y="736" />
