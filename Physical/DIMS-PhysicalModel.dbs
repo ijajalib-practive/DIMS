@@ -3,9 +3,9 @@
 	<schema name="dims" >
 		<table name="acquirer_bin_master" row_count="7" spec="" >
 			<column name="acquirer_bin" type="VARCHAR" length="10" jt="12" mandatory="y" />
-			<column name="acquirer_code" type="VARCHAR" length="3" jt="12" mandatory="y" />
-			<column name="last_modified_by" type="VARCHAR" length="20" jt="12" />
-			<column name="last_modified_timestamp" type="TIMESTAMP" length="6" jt="93" mandatory="y" >
+			<column name="acquirer_code_1" prior="acquirer_code" type="VARCHAR" length="100" jt="12" mandatory="y" />
+			<column name="last_modified_by_1" prior="last_modified_by" type="VARCHAR" length="20" jt="12" />
+			<column name="last_modified_timestamp_1" prior="last_modified_timestamp" type="TIMESTAMP" length="6" jt="93" mandatory="y" >
 				<defo><![CDATA[CURRENT_TIMESTAMP(6)]]></defo>
 			</column>
 			<column name="created_by" type="VARCHAR" length="20" jt="12" mandatory="y" />
@@ -10126,7 +10126,7 @@
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
 		</table>
 	</schema>
-	<connector name="MySql_Dev3" database="MySql" driver_class="com.mysql.jdbc.Driver" driver_jar="mysql-connector-java-8.0.30.jar" url="jdbc:mysql://127.0.0.1:3999/dims" host="localhost" port="3306" user="dba_ncde_cloudsql_user" passwd="RjB4dHJkOFRfTXk4dFk=" useSystemProxy="false" />
+	<connector name="MySql_Dev3" database="MySql" driver_class="com.mysql.jdbc.Driver" driver_jar="mysql-connector-j-8.0.31.jar" url="jdbc:mysql://127.0.0.1:3999/dims" host="localhost" port="3306" user="dba_ncde_cloudsql_user" passwd="RjB4dHJkOFRfTXk4dFk=" useSystemProxy="false" />
 	<layout name="Letter Management" id="Layout-2a3" confirmed="y" show_relation="cascade" >
 		<entity schema="dims" name="fee_rule_daily_detail" color="3986C1" x="1040" y="656" />
 		<entity schema="dims" name="fee_rule_logs_detail_4" color="3986C1" x="704" y="656" />
@@ -10600,7 +10600,6 @@ for ( Schema schema: project.schemas ){
 - Double-click table headers, columns, or foreign keys to edit]]></comment>
 		</callout>
 		<group name="acquirer_bin_master" color="ECF0F7" >
-			<entity schema="dims" name="acquirer_bin_master" />
 			<entity schema="dims" name="country_code_master" />
 			<entity schema="dims" name="create_case_pubsub_message_status" />
 			<entity schema="dims" name="dims_migrated_merchants" />
@@ -10623,6 +10622,7 @@ for ( Schema schema: project.schemas ){
 			<entity schema="dims" name="sorting_types" />
 			<entity schema="dims" name="subject_sott" />
 			<entity schema="dims" name="test" />
+			<entity schema="dims" name="acquirer_bin_master" />
 		</group>
 		<group name="document_type_master" color="ECECF7" >
 			<entity schema="dims" name="document_type_master" />
